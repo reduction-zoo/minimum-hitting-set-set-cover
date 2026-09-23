@@ -1,0 +1,7 @@
+[project]
+name = "minimum-hitting-set-set-cover"
+version = "0.1.0"
+requires-python = ">=3.12"
+dependencies = [
+    "z3-solver>=4.15,<5",
+]
