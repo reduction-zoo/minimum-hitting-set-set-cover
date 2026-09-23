@@ -1,0 +1,9 @@
+# Active support when a universe size is encoded compactly
+
+**Claim and applicability.** For a finite set system whose universe is encoded by a decimal size but whose member incidences are listed explicitly, an incidence-dual construction can index target sets by the active support `A=⋃C_j` rather than every numeric universe element. A minimum hitting set uses no element outside `A`; each source member lies within `A`. This applies to exact minimum-cardinality hitting set and thresholded feasibility under the usual subset predicate. It does not justify discarding elements when outputs must enumerate *all feasible* witnesses, including nonminimal ones.
+
+**Evidence and status.** General elementary argument in [round 002 proof](../../campaigns/minimum-hitting-set-set-cover/work/proof.md), prompted by the [independent size counterexample](../../campaigns/minimum-hitting-set-set-cover/reviews/initial/review.md). The targeted [large sparse check](../../campaigns/minimum-hitting-set-set-cover/rounds/002/large_sparse.py) tests its executable consequence. Awaiting focused independent re-review of the repaired rule. Tags: succinct universe, sparse incidence, active support, size bound.
+
+**Consequence for search.** Before claiming polynomial size, compare all constructed object counts with the *written input length*, not with a numeric field. Restrict construction to explicitly supported elements when the solution contract permits it, and reconstruct the index map from the source for recovery.
+
+**Use history.** [Round 002](../../campaigns/minimum-hitting-set-set-cover/rounds/002/round.md), 2026-09-23: using active support removed expansion proportional to the numeric universe size in the targeted check. Proposed for later promotion to the board's local shared experience collection; the board was not edited during this campaign.

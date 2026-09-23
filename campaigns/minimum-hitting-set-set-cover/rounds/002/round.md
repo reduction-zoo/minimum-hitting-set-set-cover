@@ -8,8 +8,12 @@ First discriminating check: [large_sparse.py](large_sparse.py) runs F and G in f
 
 ## Evidence and diagnosis
 
-Pending.
+The new test failed on the old candidate at its first 100,000-element sparse case: target output was too long. The independent review had also measured failure to parse a legal 4,301-digit integer. The cause was enumeration of the numeric universe size and Python's default integer digit cap. The repaired map enumerates only the active support and reconstructs it in recovery; it disables the digit cap in the CLI. The targeted check now passes 4 source instances and 4 target outputs, including three 5,001-digit-universe inputs. The prepared suite still passes 120 instances and 194 target outputs; the separate exhaustive verifier still passes 689 and 821. See [verification](../../work/verification.md) and [repaired proof](../../work/proof.md). These checks support the change on finite inputs; the new proof supplies the input-length bound.
+
+Outcome: **supported**, pending focused independent re-review. The old polynomial-size claim was refuted; no conclusion drawn from the old finite suite is used to support that asymptotic claim.
+
+Experience extraction: [active support for succinct universes](../../../../research/experience/active-support-for-succinct-universe.md) created as a reusable lemma and size-audit reminder. Its proposed promotion to the board's local collection remains pending without editing the board.
 
 ## Next action
 
-Run the new check against the old implementation to establish the failure, repair F/G and proof, then rerun affected checks and seek focused re-review.
+Request focused re-review of the map, recovery, bound, and long-integer behavior. If advanced, draft and inspect the manuscript.
