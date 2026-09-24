@@ -1,6 +1,6 @@
 # Minimum Hitting Set → Minimum Set Cover
 
-**Status:** `ready_for_expert_review` · **Research model:** `GPT-6 (exact variant/version unavailable)` · **Submitted:** 2026-09-23
+**Status:** `ready_for_expert_review` · **Research model:** `gpt-6-sol` · **Submitted:** 2026-09-23
 
 The public campaign supplies deterministic polynomial-time construction and recovery for the fixed exact optimization endpoints. Every globally optimal target output recovers a globally optimal source hitting set, including all ties; NO-SOLUTION corresponds exactly to infeasibility.
 
